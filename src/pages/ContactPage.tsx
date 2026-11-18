@@ -7,7 +7,6 @@ import {
   Send,
   CheckCircle2,
   Camera,
-  ShieldCheck,
 } from 'lucide-react';
 import { companyInfo, serviceAreas } from '../data/friendlyContent';
 import contractorPhoto from '../assets/images/contractor-hero.jpg';
@@ -97,7 +96,7 @@ SMS Consent: ${formData.smsConsent ? 'Yes' : 'No'}`
                 {companyInfo.phone}
               </div>
               <div style={{ fontSize: '0.85rem', color: '#475569', marginBottom: '16px' }}>
-                Mon–Fri: 8:00 AM – 5:00 PM
+                Mon–Fri: 9:00 AM – 5:00 PM
               </div>
               <a href={`tel:${companyInfo.phoneRaw}`} className="btn-amber" style={{ padding: '8px 18px', fontSize: '0.875rem' }}>
                 <Phone size={15} /> Call or Text Now
@@ -366,20 +365,7 @@ SMS Consent: ${formData.smsConsent ? 'Yes' : 'No'}`
                 </div>
               </div>
 
-              {/* Work Guarantee */}
-              <div className="white-card" style={{ padding: '24px' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <ShieldCheck size={24} color="#0063A6" style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>
-                      Our Workmanship Guarantee
-                    </h4>
-                    <p style={{ fontSize: '0.875rem', color: '#475569', lineHeight: 1.5, margin: 0 }}>
-                      If something isn’t done right, we return and fix it. No runarounds, no surprise invoices.
-                    </p>
-                  </div>
-                </div>
-              </div>
+
 
             </div>
 

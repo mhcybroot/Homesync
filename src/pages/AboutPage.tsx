@@ -103,7 +103,7 @@ export default function AboutPage() {
                 </div>
                 <div className="white-card tactile-card-shadow" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '5px 12px', borderRadius: '9999px', fontSize: '0.825rem', fontWeight: 600, color: '#0b1c30', border: '1px solid #cbd5e1' }}>
                   <Clock size={15} color="#0063a6" />
-                  <span>Mon–Fri 8am–5pm</span>
+                  <span>Mon–Fri 9am–5pm</span>
                 </div>
               </div>
 
@@ -580,7 +580,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0b1c30', margin: 0 }}>Operating Hours</h4>
-                    <p style={{ fontSize: '0.875rem', color: '#0b1c30', fontWeight: 600, margin: '2px 0 0' }}>Monday – Friday: 8:00 AM – 5:00 PM</p>
+                    <p style={{ fontSize: '0.875rem', color: '#0b1c30', fontWeight: 600, margin: '2px 0 0' }}>Monday – Friday: 9:00 AM – 5:00 PM</p>
                     <p style={{ fontSize: '0.8rem', color: '#565e74', margin: '2px 0 0' }}>Saturday &amp; Sunday: Closed</p>
                   </div>
                 </div>
@@ -689,7 +689,7 @@ export default function AboutPage() {
               </h2>
 
               <p style={{ fontSize: '1.05rem', color: '#dae2fd', lineHeight: 1.6, margin: 0 }}>
-                Call or text us at <strong style={{ color: '#ffffff' }}>{companyInfo.phone}</strong> or request a free estimate online. We're here Monday–Friday, 8am–5pm.
+                Call or text us at <strong style={{ color: '#ffffff' }}>{companyInfo.phone}</strong> or request a free estimate online. We're here Monday–Friday, 9am–5pm.
               </p>
             </div>
 

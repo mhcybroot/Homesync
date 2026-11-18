@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Phone, MapPin, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Menu, X, Phone, MapPin, ShieldCheck, ArrowRight } from 'lucide-react';
 import logo from '../assets/logo.png';
 import { companyInfo } from '../data/friendlyContent';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
   const location = useLocation();
+
+  useEffect(() => {
+    document.body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,16 +21,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    if (isDark) {
-      document.body.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -55,7 +47,7 @@ export default function Header() {
               <span>Call or Text: {companyInfo.phone}</span>
             </a>
             <span className="utility-separator utility-desktop-only">·</span>
-            <span className="utility-hours utility-desktop-only">Mon–Fri 8:00 AM – 5:00 PM</span>
+            <span className="utility-hours utility-desktop-only">Mon–Fri 9:00 AM – 5:00 PM</span>
           </div>
         </div>
       </div>
@@ -84,12 +76,6 @@ export default function Header() {
               Home
             </Link>
             <Link
-              to="/services"
-              className={`nav-item ${location.pathname === '/services' ? 'active' : ''}`}
-            >
-              Services
-            </Link>
-            <Link
               to="/about"
               className={`nav-item ${location.pathname === '/about' ? 'active' : ''}`}
             >
@@ -111,15 +97,6 @@ export default function Header() {
 
           {/* Header Action Cluster */}
           <div className="header-action-cluster">
-            <button
-              className="theme-toggle-btn"
-              onClick={() => setIsDark(!isDark)}
-              aria-label="Toggle light/dark theme"
-              title="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
             <a href={`tel:${companyInfo.phoneRaw}`} className="header-phone-cta desktop-only">
               <Phone size={16} className="text-brand-blue" />
               <span>{companyInfo.phone}</span>
@@ -150,9 +127,6 @@ export default function Header() {
           <div className="mobile-drawer-inner">
             <Link to="/" className={`mobile-nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={closeMobileMenu}>
               Home
-            </Link>
-            <Link to="/services" className={`mobile-nav-link ${location.pathname === '/services' ? 'active' : ''}`} onClick={closeMobileMenu}>
-              Services
             </Link>
             <Link to="/about" className={`mobile-nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={closeMobileMenu}>
               About Us

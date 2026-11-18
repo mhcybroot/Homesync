@@ -54,7 +54,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="home-page bg-blueprint-grid" style={{ minHeight: '100vh' }}>
+    <div className="home-page bg-blueprint-grid">
       
       {/* ── 1. HERO SECTION ── */}
       <section style={{ padding: '40px 0 60px', borderBottom: '1px solid #E2E8F0' }}>
@@ -319,11 +319,11 @@ export default function HomePage() {
 
               <div style={{ paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
                 <Link
-                  to="/services#maintenance"
+                  to="/get-quote?category=maintenance"
                   className="btn-amber"
                   style={{ width: '100%', justifyContent: 'center', fontSize: '0.9rem', padding: '11px' }}
                 >
-                  Explore All Maintenance Services <ArrowRight size={16} />
+                  Get Maintenance Estimate <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -394,11 +394,11 @@ export default function HomePage() {
 
               <div style={{ paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
                 <Link
-                  to="/services#preservation"
+                  to="/get-quote?category=preservation"
                   className="btn-outline-navy"
                   style={{ width: '100%', justifyContent: 'center', fontSize: '0.9rem', padding: '11px' }}
                 >
-                  View Preservation Details <ArrowRight size={16} />
+                  Get Preservation Quote <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -457,17 +457,50 @@ export default function HomePage() {
 
               <div style={{ paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
                 <Link
-                  to="/services#turnover"
+                  to="/get-quote?category=turnover"
                   className="btn-outline-navy"
                   style={{ width: '100%', justifyContent: 'center', fontSize: '0.9rem', padding: '11px' }}
                 >
-                  See Full Turnover Checklist <ArrowRight size={16} />
+                  Schedule Unit Turnover <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
           </div>
 
+        </div>
+      </section>
+
+      {/* ── 2.5. WE TREAT EVERY HOME LIKE OUR OWN (Revision 11) ── */}
+      <section style={{ padding: '60px 0', background: '#F8FAFC', borderBottom: '1px solid #E2E8F0' }}>
+        <div className="container" style={{ maxWidth: '960px', margin: '0 auto', padding: '0 20px', textAlign: 'center' }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: '#EFF6FF',
+            border: '1px solid #BFDBFE',
+            padding: '5px 14px',
+            borderRadius: '9999px',
+            marginBottom: '16px',
+          }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#0063A6' }} />
+            <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0063A6', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+              OUR COMMITMENT
+            </span>
+          </div>
+
+          <h2 style={{ fontSize: 'clamp(1.85rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', lineHeight: 1.25, marginBottom: '16px' }}>
+            We Treat Every Home Like Our Own.
+          </h2>
+
+          <p style={{ fontSize: '1.125rem', color: '#475569', lineHeight: 1.7, maxWidth: '820px', margin: '0 auto 20px' }}>
+            From fixing a broken door to preparing a property for its next residents, we approach every job with care, integrity, and attention to detail. Our reputation is built on quality service, exceptional workmanship, and a commitment to treating every property as if it were our own.
+          </p>
+
+          <p style={{ fontSize: '0.975rem', fontWeight: 700, color: '#0063A6', margin: 0 }}>
+            Reliable service, clear communication, and work you can feel confident in.
+          </p>
         </div>
       </section>
 
